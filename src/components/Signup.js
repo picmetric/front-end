@@ -1,8 +1,11 @@
 import React from 'react';
-import {withFormik} from 'formik';
+// import {withFormik} from 'formik';
+import Form from './Form'
 
 const Signup = () => {
-    return (<div>Build better Signuppage</div>)
+    return (<Form/>)
+    //add functionality so that user is added to database
+    //block existing user fields besides password
 }
 
 export default Signup;
