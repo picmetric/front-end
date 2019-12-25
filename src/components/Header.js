@@ -8,6 +8,7 @@ const Header = () => {
     background: navy;
     display: flex;
     justify-content: space-around;
+    padding: 2%;
   `;
   return (
     <HeaderSection className="header">
