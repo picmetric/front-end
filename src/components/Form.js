@@ -8,7 +8,7 @@ function InfoForm({ errors, touched }) {
   // Need to figure out why form doesn't clear after submit
 
   return (
-    <Form>
+    <Form id='myForm'>
       <div className="fieldcontainer">
         {touched.email && errors.email && (
           <p className="errors">{errors.email}</p>
@@ -70,6 +70,8 @@ const FormikForm = withFormik({
 
   handleSubmit(values) {
     console.log(values);
+    document.getElementById('myForm').reset()
+    
   }
 })(InfoForm);
 
