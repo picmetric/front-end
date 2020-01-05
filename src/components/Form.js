@@ -5,7 +5,6 @@ import * as Yup from "yup";
 function InfoForm({ errors, touched }) {
   //add validation for fields availability
   //add loading state functionality
-  // Need to figure out why form doesn't clear after submit
 
   return (
     <Form id='myForm'>
@@ -70,6 +69,8 @@ const FormikForm = withFormik({
 
   handleSubmit(values) {
     console.log(values);
+    //for login needs to verify if existing user
+    //for signup needs to add to users array
     document.getElementById('myForm').reset()
     
   }

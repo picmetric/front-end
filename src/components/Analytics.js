@@ -13,6 +13,7 @@ const Analytics = () => {
 //       console.log(err);
 //     });
 
+// ideally clicking on an image pulls up that images analytics
   return <div>Build better Analytics</div>;
 };
 
