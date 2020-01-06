@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Form from "./components/Form";
+import Account from './components/Account';
 // import SignupForm from "./components/Signup"; 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         )}/>
         <Route path="/login" component={Form} />
         <Route path="/signup" component={Form} />
+
+        {/* Not sure how to do this but something like "if loggedin===true, then render accountpage" */}
+        <Route path="/account" component={Account} />
       </div>
     </Router>
   );

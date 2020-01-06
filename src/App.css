@@ -17,3 +17,14 @@
   text-align: center;
   margin: 3%;
 }
+.errors{
+  color: red;
+  /* border: 1px red solid; */
+  /* width: 15%; */
+  text-align: center
+}
+/* .fieldcontainer{
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+} */
