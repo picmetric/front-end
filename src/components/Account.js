@@ -9,7 +9,7 @@ const Account = props => {
     return (<div>
         {/* create 'add new image' button and on click render the image form element */}
         <ImageForm/>
-        <Gallery/>
+        <Gallery items={props.items} clicked={props.clicked} setClicked={props.setClicked}/>
         <Analytics/>
     </div>)
 }

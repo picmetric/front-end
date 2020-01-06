@@ -10,36 +10,44 @@ const Image = styled.img`
 
 `;
 
-const Gallery = () => {
-  const [items, setItems] = useState([]);
+const Gallery = (props) => {
 
-  useEffect(() => {
-    axios.get('https://picsum.photos/v2/list')
-      .then(res => {
-          console.log(res.data);
-          //access returned object, setItems to returned images
+  const onClickHandler = (e) => {
+    props.setClicked(e.target);
+    // console.log( props.clicked)
+  }
+  // const [items, setItems] = useState([]);
+  // useEffect(() => {
+  //   axios.get('https://picsum.photos/v2/list')
+  //     .then(res => {
+  //         console.log(res.data);
+  //         //access returned object, setItems to returned images
 
-          setItems(res.data);
-          // console.log(items);
+  //         setItems(res.data);
+  //         // console.log(items);
         
 
-          //map over items, and make each one a link to it's own page, style for gridview
-      })
-      .catch(err => {
-          console.log(err);
-      })
-  }, []);
-
+  //         //map over items, and make each one a link to it's own page, style for gridview
+  //     })
+  //     .catch(err => {
+  //         console.log(err);
+  //     })
+  // }, []);
+    console.log('this is props', props);
   return <div>
     {
-      items.map( item => {
-        return <Link>
-          <Image src= {item.download_url} alt={item.author}/>
+      props.items.map( item => {
+        return <Link  to={`/account/image/${item.id}`}>
+          <Image id ={item.id} onClick={onClickHandler} src= {item.download_url} alt={item.author}/>
         </Link>
       })
     }
     {/* make better gallery */}
   </div>;
+
+  
 };
+
+
 
 export default Gallery;
