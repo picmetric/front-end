@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { logout } from "./auth/utils/logout";
 import styled from "styled-components";
 
-const Header = () => {
+const Header = props => {
   const HeaderSection = styled.section`
     width: 100%;
     background: navy;
@@ -10,6 +11,7 @@ const Header = () => {
     justify-content: space-around;
     padding: 2%;
   `;
+
   return (
     <HeaderSection className="header">
       <Link className="header-link" to="/">
@@ -18,9 +20,17 @@ const Header = () => {
       <Link className="header-link" to="/about">
         About
       </Link>
-      <Link className="header-link" to="/login">
-        Login
+
+      <Link className="header-link" to="/account">
+        Account
       </Link>
+
+      <button className="logoutBtn" onClick={logout}>
+        <Link to="/login" className="header-link">
+          Logout
+        </Link>
+      </button>
+
       <Link className="header-link" to="/signup">
         Signup
       </Link>
