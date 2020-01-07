@@ -21,14 +21,13 @@ function LoginForm({ history }) {
     e.preventDefault();
     setIsFetching(true);
 
-    axiosWithAuth();
-    // .post("/login", credentials)
-    // .then(res => {
-    // localStorage.setItem("token", res.data.payload);
-    localStorage.setItem("token", true);
-    history.push("/account");
-    // })
-    // .catch(err => console.log(err));
+    axiosWithAuth()
+      .post("/api/auth/login", credentials)
+      .then(res => {
+        console.log(res);
+        history.push("/account");
+      })
+      .catch(err => console.log(err));
   };
 
   return (

@@ -25,7 +25,7 @@ function App() {
           render={() => <div>Get about page from svyat</div>}
         />
 
-        <PrivateRoute exact path="/account" component={Account}></PrivateRoute>
+        <Route exact path="/account" component={Account} />
 
         <Route path="/login" component={LoginForm} />
         <Route path="/signup" component={Form} />
