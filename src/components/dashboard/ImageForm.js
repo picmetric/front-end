@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const ImageSlot = styled.div`
   background: green;
+  display: flex;
+
 `;
 
 class ImageForm extends Component {
@@ -16,7 +18,7 @@ class ImageForm extends Component {
   }
   
   handleChange = (ev) => {
-    this.setState({success: false, url : ""});
+    this.setState({success: false, url: ""});
     
   }
   // Perform the upload
