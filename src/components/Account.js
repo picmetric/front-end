@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, Route} from 'react-router-dom';
 import ImageForm from './ImageForm';
 import Gallery from './Gallery';
-import Analytics from './Analytics';
+// import Analytics from './Analytics';
 
 
 const Account = props => {
@@ -10,7 +10,7 @@ const Account = props => {
         {/* create 'add new image' button and on click render the image form element */}
         <ImageForm/>
         <Gallery items={props.items} clicked={props.clicked} setClicked={props.setClicked}/>
-        <Analytics/>
+
     </div>)
 }
 

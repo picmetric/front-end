@@ -7,7 +7,15 @@ import {Link} from "react-router-dom";
 const Image = styled.img`
   width: 30%;
   margin: 1%;
+  
+  &:hover{
+    width: 35%;
+    margin: .5%
+  }
+`;
 
+const GalleryContainer = styled.div`
+  max-width: 100%;
 `;
 
 const Gallery = (props) => {
@@ -34,7 +42,7 @@ const Gallery = (props) => {
   //     })
   // }, []);
     console.log('this is props', props);
-  return <div>
+  return <GalleryContainer>
     {
       props.items.map( item => {
         return <Link  to={`/account/image/${item.id}`}>
@@ -42,8 +50,7 @@ const Gallery = (props) => {
         </Link>
       })
     }
-    {/* make better gallery */}
-  </div>;
+  </GalleryContainer>;
 
   
 };
