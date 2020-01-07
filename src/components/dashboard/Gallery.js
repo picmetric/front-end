@@ -8,6 +8,11 @@ import ImagePage from "./ImagePage";
 const Image = styled.img`
   width: 30%;
   margin: 1%;
+
+  &:hover{
+    width: 35%;
+    margin: .5%;
+  }
 `;
 
 const Gallery = props => {
