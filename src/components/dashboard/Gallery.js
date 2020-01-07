@@ -49,7 +49,7 @@ const Gallery = props => {
       })}
 
       <Route
-        w // path={`/account/image/:clickedId`}
+        // path={`/account/image/:clickedId`}
         path={`/account/image/${clicked.id}`}
         render={() => <ImagePage picURL={clicked.src} />}
       />
