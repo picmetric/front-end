@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Header = props => {
   const HeaderSection = styled.section`
-    width: 100%;
+    max-width: 100%;
     background: navy;
     display: flex;
     justify-content: space-around;
@@ -17,8 +17,8 @@ const Header = props => {
       <Link className="header-link" to="/">
         Home
       </Link>
-      <Link className="header-link" to="/about">
-        About
+      <Link className="header-link" to="/account">
+        Account
       </Link>
 
       <Link className="header-link" to="/account">
