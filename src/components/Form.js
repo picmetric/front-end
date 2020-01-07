@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 function InfoForm({ errors, touched }) {
   //add validation for fields availability
   //add loading state functionality
-
+  
   return (
     <Form id='myForm'>
       <div className="fieldcontainer">
