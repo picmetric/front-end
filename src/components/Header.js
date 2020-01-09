@@ -10,16 +10,17 @@ const Header = props => {
     display: flex;
     justify-content: space-around;
     padding: 2%;
+    background: #F2CBFA;
   `;
 
   return (
     <HeaderSection className="header">
-      <Link className="header-link" to="/">
+      <a className="header-link" href="https://friendly-shannon-b2c600.netlify.com/">
         Home
-      </Link>
-      <Link className="header-link" to="/account">
-        Account
-      </Link>
+      </a>
+      <a className="header-link" href="https://friendly-shannon-b2c600.netlify.com/about.html">
+        About
+      </a>
 
       <Link className="header-link" to="/account">
         Account
