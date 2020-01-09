@@ -3,7 +3,23 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const ImageSlot = styled.div`
-  background: green;
+  background: slategray;
+  display: flex;
+  justify-content: center;
+`;
+const Button = styled.button`
+  width: 35%;
+  margin: 5%;
+  height: 15%;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  &:hover{
+    color: white;
+    background: black
+    width: 45%;
+    height: 20%;
+  }
 `;
 
 class ImageForm extends Component {
@@ -16,7 +32,7 @@ class ImageForm extends Component {
   }
   
   handleChange = (ev) => {
-    this.setState({success: false, url : ""});
+    this.setState({success: false, url: ""});
     
   }
   // Perform the upload
@@ -74,7 +90,7 @@ class ImageForm extends Component {
           {this.state.success ? <Success_message/> : null}
           <input onChange={this.handleChange} ref={(ref) => { this.uploadInput = ref; }} type="file"/>
           <br/>
-          <button onClick={this.handleUpload}>UPLOAD</button>
+          <Button onClick={this.handleUpload}>UPLOAD</Button>
         </center>
       </ImageSlot>
     );
