@@ -2,6 +2,40 @@ import React, { useState } from "react";
 
 import { axiosWithAuth } from "./utils/axiosWithAuth";
 
+import styled from 'styled-components';
+
+const FormSlot = styled.div`
+
+  display: flex;
+  justify-content: center;
+`;
+const StyledForm = styled.form`
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const StyledInput = styled.input`
+  margin: 10%;
+  border: 1px black solid;
+`;
+
+const Button = styled.button`
+  width: 35%;
+  margin: 5%;
+  height: 15%;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  &:hover{
+    color: white;
+    background: black
+    width: 45%;
+    height: 20%;
+  }
+`;
+
+
 function LoginForm({ history }) {
   const [credentials, setCredentials] = useState({
     username: "",
@@ -32,26 +66,26 @@ function LoginForm({ history }) {
   };
 
   return (
-    <div>
-      <form onSubmit={login}>
-        <input
+    <FormSlot>
+      <StyledForm onSubmit={login}>
+        <StyledInput
           type="text"
           name="username"
           placeholder="username..."
           value={credentials.username}
           onChange={handleChange}
         />
-        <input
+        <StyledInput
           type="password"
           name="password"
           placeholder="password..."
           value={credentials.password}
           onChange={handleChange}
         />
-        <button>Log in</button>
+        <Button>Log in</Button>
         {isFetching && "logging in"}
-      </form>
-    </div>
+      </StyledForm>
+    </FormSlot>
   );
 }
 
