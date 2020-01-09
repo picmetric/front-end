@@ -7,7 +7,7 @@ const ImageSlot = styled.div`
   display: flex;
   justify-content: center;
 `;
-const SubmitButton = styled.button`
+const Button = styled.button`
   width: 35%;
   margin: 5%;
   height: 15%;
@@ -90,7 +90,7 @@ class ImageForm extends Component {
           {this.state.success ? <Success_message/> : null}
           <input onChange={this.handleChange} ref={(ref) => { this.uploadInput = ref; }} type="file"/>
           <br/>
-          <SubmitButton onClick={this.handleUpload}>UPLOAD</SubmitButton>
+          <Button onClick={this.handleUpload}>UPLOAD</Button>
         </center>
       </ImageSlot>
     );
